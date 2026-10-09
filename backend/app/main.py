@@ -11,6 +11,7 @@ from pydantic import BaseModel, ValidationError
 
 from app import domain_intel, engine
 from app.config import load_env_file
+from app.fetcher import FetchError, fetch_offer
 from app.models import DetectorStatus, RedFlag, Verdict
 from app.parser import ParseError, parse_eml, parse_text
 from app.text_model import get_model
@@ -85,7 +86,10 @@ async def _offer_from_json(request: Request):
     if len(given) != 1:
         raise HTTPException(400, "Send exactly one of text, url or file.")
     if body.url is not None:
-        raise HTTPException(501, "URL analysis is not implemented yet.")
+        try:
+            return await fetch_offer(body.url)
+        except FetchError as exc:
+            raise HTTPException(422, str(exc)) from exc
     # store_for_research is accepted but nothing is persisted until the DB exists (NFR-4).
     return parse_text(body.text or "")
 

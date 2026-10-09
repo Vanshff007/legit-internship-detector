@@ -69,7 +69,7 @@ def test_bad_inputs():
     both = {"text": "hi", "url": "https://example.com"}
     assert client.post("/api/v1/analyze", json=both).status_code == 400
     r = client.post("/api/v1/analyze", json={"url": "https://example.com"})
-    assert r.status_code == 501
+    assert r.status_code == 422  # DNS is disabled in tests
 
 
 VERIFIED_EML = b"""From: Infosys Campus Hiring <campus.hiring@infosys.com>
