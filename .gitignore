@@ -16,3 +16,11 @@ ml/artifacts/
 # Docs stay local; only the top-level README is published
 *.md
 !/README.md
+
+# Local feedback database
+backend/data/
+
+# Web build output and dependencies
+node_modules/
+web/dist/
+extension/dist/

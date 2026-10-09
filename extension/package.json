@@ -1,0 +1,13 @@
+{
+  "name": "legit-internship-detector-extension",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.4",
+    "typescript": "^5.9.3"
+  }
+}
