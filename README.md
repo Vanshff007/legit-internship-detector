@@ -30,27 +30,41 @@ Output: **risk score (0–100)**, verdict (Safe / Suspicious / Likely Scam), and
 
 ```
 legit-internship-detector/
-├── README.md
-├── CLAUDE.md                 # context for AI-assisted development
-├── docs/
-│   ├── 01-problem-statement.md
-│   ├── 02-requirements.md
-│   ├── 03-architecture.md
-│   ├── 04-detection-engine.md
-│   ├── 05-dataset.md
-│   ├── 06-api-spec.md
-│   ├── 07-tech-stack.md
-│   ├── 08-roadmap.md
-│   └── 09-evaluation.md
 ├── backend/                  # FastAPI service + detection engine
-├── ml/                       # notebooks, training scripts, model artifacts
-├── web/                      # React web app
-└── extension/                # Chrome extension (Manifest V3)
+├── ml/                       # data preparation, training scripts
+├── web/                      # React web app (planned)
+└── extension/                # Chrome extension, Manifest V3 (planned)
 ```
+
+## Quick start
+
+Requires Python 3.11.
+
+```bash
+# 1. Train the text model (needs Kaggle credentials in .env, see .env.example)
+cd ml
+py -3.11 -m venv .venv
+.venv/Scripts/python -m pip install -e .
+.venv/Scripts/python scripts/download_emscad.py
+.venv/Scripts/python scripts/prepare_emscad.py
+.venv/Scripts/python train_baseline.py
+
+# 2. Run the API
+cd ../backend
+py -3.11 -m venv .venv
+.venv/Scripts/python -m pip install -e ".[dev]"
+.venv/Scripts/python -m uvicorn app.main:app --reload
+```
+
+Open http://127.0.0.1:8000/docs. The API also runs without step 1; the text model then reports `unavailable`.
+
+Optional settings in `.env`: `SAFE_BROWSING_API_KEY` (link checks), `REDIS_URL` (shared cache).
+
+Run tests with `.venv/Scripts/python -m pytest` in `backend/`.
 
 ## Status
 
-Backend skeleton is running: text and `.eml` input, entity extractor, first 5 rules, company verifier (100 known companies), TF-IDF text model, domain intel (lookalikes, domain age, Safe Browsing), email header analyzer, risk scorer. See [backend/README.md](backend/README.md) and [docs/08-roadmap.md](docs/08-roadmap.md).
+Backend skeleton is running: text and `.eml` input, entity extractor, first 5 rules, company verifier (100 known companies), TF-IDF text model, domain intel (lookalikes, domain age, Safe Browsing), email header analyzer, risk scorer. URL input, web app and browser extension are next.
 
 ## Team
 
