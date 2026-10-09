@@ -12,3 +12,7 @@ __pycache__/
 # Data and model artifacts
 ml/data/
 ml/artifacts/
+
+# Docs stay local; only the top-level README is published
+*.md
+!/README.md
