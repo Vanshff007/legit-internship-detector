@@ -7,7 +7,7 @@ type Mode = "text" | "url" | "file";
 const MODES: { id: Mode; label: string }[] = [
   { id: "text", label: "Paste text" },
   { id: "url", label: "Link" },
-  { id: "file", label: "Email file" },
+  { id: "file", label: "Email or PDF" },
 ];
 
 const SAMPLE =
@@ -149,18 +149,18 @@ export default function App() {
               {mode === "file" && (
                 <>
                   <label htmlFor="offer-file" className="mb-2 block text-sm font-bold">
-                    Email saved as .eml (max 2 MB)
+                    Email saved as .eml or PDF (max 2 MB)
                   </label>
                   <input
                     id="offer-file"
                     type="file"
-                    accept=".eml,message/rfc822"
+                    accept=".eml,.pdf,message/rfc822,application/pdf"
                     onChange={(e) => setFile(e.target.files?.[0] ?? null)}
                     className="block w-full text-sm file:mr-3 file:rounded file:border-2 file:border-ink file:bg-paper file:px-3 file:py-1.5 file:font-bold file:text-ink"
                   />
                   <p className="mt-2 text-sm text-ink-soft">
-                    In Gmail: open the email, choose More (⋮) then Download message. Sender checks
-                    work only with the email file.
+                    In Gmail: open the email, choose More (⋮), then Download message for .eml, or
+                    Print and Save as PDF. The .eml file allows the most checks.
                   </p>
                 </>
               )}
