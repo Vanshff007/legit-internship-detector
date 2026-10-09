@@ -12,6 +12,7 @@ dependencies = [
     "joblib>=1.4",
     "httpx>=0.27",
     "trafilatura>=1.12",
+    "pypdf>=5.0",
     "certifi>=2024.2",
     "tldextract>=5.1",
     "rapidfuzz>=3.6",

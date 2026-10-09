@@ -15,11 +15,11 @@ from app import domain_intel, engine, feedback
 from app.config import load_env_file
 from app.fetcher import FetchError, fetch_offer
 from app.models import DetectorStatus, RedFlag, Verdict
-from app.parser import ParseError, parse_eml, parse_text
+from app.parser import ParseError, parse_file, parse_text
 from app.ratelimit import analyze_limit, feedback_limit
 from app.text_model import get_model
 
-MAX_EML_BYTES = 2 * 1024 * 1024
+MAX_FILE_BYTES = 2 * 1024 * 1024
 # Built web app (web/dist). Served at / when present, so one process runs everything.
 WEB_DIST = Path(__file__).resolve().parents[2] / "web" / "dist"
 
@@ -83,10 +83,10 @@ async def _offer_from_multipart(request: Request):
         raise HTTPException(400, "Multipart request must include a 'file' field.")
     if form.get("text") or form.get("url"):
         raise HTTPException(400, "Send exactly one of text, url or file.")
-    raw = await upload.read(MAX_EML_BYTES + 1)
-    if len(raw) > MAX_EML_BYTES:
+    raw = await upload.read(MAX_FILE_BYTES + 1)
+    if len(raw) > MAX_FILE_BYTES:
         raise HTTPException(413, "File too large (max 2 MB).")
-    return parse_eml(raw)
+    return parse_file(raw)
 
 
 async def _offer_from_json(request: Request):
