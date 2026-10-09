@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Legit Internship Detector</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Legit Internship Detector</h1>
+    <div class="actions">
+      <button id="check-selection" type="button">Check selected text</button>
+      <button id="check-page" type="button" class="secondary">Check whole page</button>
+    </div>
+    <section id="result" aria-live="polite"></section>
+    <details>
+      <summary>Settings</summary>
+      <label for="api-base">Checker address</label>
+      <input id="api-base" type="url" placeholder="http://127.0.0.1:8000" />
+      <button id="save-api" type="button" class="secondary">Save</button>
+      <p id="settings-note" class="note"></p>
+    </details>
+    <script type="module" src="dist/popup.js"></script>
+  </body>
+</html>

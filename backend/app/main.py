@@ -4,19 +4,24 @@ import os
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from dataclasses import asdict
-from typing import Any
+from pathlib import Path
+from typing import Any, Literal
 
-from fastapi import FastAPI, HTTPException, Request
-from pydantic import BaseModel, ValidationError
+from fastapi import Depends, FastAPI, HTTPException, Request, Response
+from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, Field, ValidationError
 
-from app import domain_intel, engine
+from app import domain_intel, engine, feedback
 from app.config import load_env_file
 from app.fetcher import FetchError, fetch_offer
 from app.models import DetectorStatus, RedFlag, Verdict
 from app.parser import ParseError, parse_eml, parse_text
+from app.ratelimit import analyze_limit, feedback_limit
 from app.text_model import get_model
 
 MAX_EML_BYTES = 2 * 1024 * 1024
+# Built web app (web/dist). Served at / when present, so one process runs everything.
+WEB_DIST = Path(__file__).resolve().parents[2] / "web" / "dist"
 
 load_env_file()
 
@@ -62,6 +67,13 @@ class AnalyzeResponse(BaseModel):
     detectors: dict[str, DetectorOut]
     report_links: list[str]
     model_version: str | None
+    analyzed_text: str  # text the spans in `highlights` refer to; not stored
+
+
+class FeedbackRequest(BaseModel):
+    analysis_id: str = Field(pattern=r"^an_[0-9a-f]{6}$")
+    label: Literal["genuine", "scam"]
+    comment: str | None = Field(default=None, max_length=1000)
 
 
 async def _offer_from_multipart(request: Request):
@@ -94,7 +106,7 @@ async def _offer_from_json(request: Request):
     return parse_text(body.text or "")
 
 
-@app.post("/api/v1/analyze", response_model=AnalyzeResponse)
+@app.post("/api/v1/analyze", response_model=AnalyzeResponse, dependencies=[Depends(analyze_limit)])
 async def analyze(request: Request) -> AnalyzeResponse:
     content_type = request.headers.get("content-type", "")
     try:
@@ -106,6 +118,7 @@ async def analyze(request: Request) -> AnalyzeResponse:
         raise HTTPException(400, str(exc)) from exc
 
     result = await engine.analyze(offer)
+    feedback.remember(result.analysis_id, result.verdict, result.score)
     return AnalyzeResponse(
         analysis_id=result.analysis_id,
         score=result.score,
@@ -124,7 +137,15 @@ async def analyze(request: Request) -> AnalyzeResponse:
         },
         report_links=result.report_links,
         model_version=result.model_version,
+        analyzed_text=offer.body_text,
     )
+
+
+@app.post("/api/v1/feedback", status_code=204, dependencies=[Depends(feedback_limit)])
+async def submit_feedback(body: FeedbackRequest) -> Response:
+    comment = body.comment.strip() if body.comment else None
+    feedback.save(body.analysis_id, body.label, comment or None)
+    return Response(status_code=204)
 
 
 @app.get("/api/v1/health")
@@ -143,3 +164,8 @@ async def health() -> dict[str, Any]:
             "company": "ok",
         },
     }
+
+
+if WEB_DIST.is_dir():
+    # Mounted last so /api routes win.
+    app.mount("/", StaticFiles(directory=WEB_DIST, html=True), name="web")

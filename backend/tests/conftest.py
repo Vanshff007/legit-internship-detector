@@ -1,7 +1,8 @@
 import httpx
 import pytest
 
-from app import cache, domain_intel, fetcher
+from app import cache, domain_intel, fetcher, ratelimit
+from app.feedback import FEEDBACK_DB_ENV
 from app.text_model import MODEL_PATH_ENV
 
 
@@ -28,3 +29,11 @@ def offline(monkeypatch):
 
 async def _no_dns(host: str, port: int) -> list[str]:
     raise OSError("DNS disabled in tests")
+
+
+@pytest.fixture(autouse=True)
+def isolated_state(monkeypatch, tmp_path):
+    """Fresh rate limits and a throwaway feedback database for every test."""
+    ratelimit.analyze_limit.reset()
+    ratelimit.feedback_limit.reset()
+    monkeypatch.setenv(FEEDBACK_DB_ENV, str(tmp_path / "feedback.sqlite3"))

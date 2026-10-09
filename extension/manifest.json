@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Legit Internship Detector",
+  "version": "0.1.0",
+  "description": "Check a job or internship offer for scam signs: select text or check the whole page.",
+  "permissions": ["contextMenus", "activeTab", "scripting", "storage"],
+  "host_permissions": ["http://127.0.0.1/*", "http://localhost/*"],
+  "optional_host_permissions": ["https://*/*"],
+  "background": { "service_worker": "dist/background.js", "type": "module" },
+  "action": { "default_popup": "popup.html", "default_title": "Check this offer" }
+}
