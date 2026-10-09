@@ -24,3 +24,4 @@ backend/data/
 node_modules/
 web/dist/
 extension/dist/
+*.tsbuildinfo
