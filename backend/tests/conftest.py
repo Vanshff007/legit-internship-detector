@@ -1,7 +1,7 @@
 import httpx
 import pytest
 
-from app import cache, domain_intel
+from app import cache, domain_intel, fetcher
 from app.text_model import MODEL_PATH_ENV
 
 
@@ -20,5 +20,11 @@ def offline(monkeypatch):
     monkeypatch.setattr(
         domain_intel, "TRANSPORT", httpx.MockTransport(lambda request: httpx.Response(503))
     )
+    monkeypatch.setattr(fetcher, "TRANSPORT", httpx.MockTransport(lambda r: httpx.Response(503)))
+    monkeypatch.setattr(fetcher, "RESOLVE", _no_dns)
     monkeypatch.setattr(cache, "_cache", cache.MemoryCache())
     monkeypatch.delenv(domain_intel.SAFE_BROWSING_KEY_ENV, raising=False)
+
+
+async def _no_dns(host: str, port: int) -> list[str]:
+    raise OSError("DNS disabled in tests")
