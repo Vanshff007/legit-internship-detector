@@ -1,0 +1,815 @@
+[
+  {
+    "name": "Tata Consultancy Services",
+    "aliases": [
+      "TCS"
+    ],
+    "official_domains": [
+      "tcs.com"
+    ]
+  },
+  {
+    "name": "Infosys",
+    "aliases": [],
+    "official_domains": [
+      "infosys.com"
+    ]
+  },
+  {
+    "name": "Wipro",
+    "aliases": [],
+    "official_domains": [
+      "wipro.com"
+    ]
+  },
+  {
+    "name": "HCLTech",
+    "aliases": [
+      "HCL Technologies",
+      "HCL"
+    ],
+    "official_domains": [
+      "hcltech.com",
+      "hcl.com"
+    ]
+  },
+  {
+    "name": "Tech Mahindra",
+    "aliases": [],
+    "official_domains": [
+      "techmahindra.com"
+    ]
+  },
+  {
+    "name": "Cognizant",
+    "aliases": [],
+    "official_domains": [
+      "cognizant.com"
+    ]
+  },
+  {
+    "name": "Accenture",
+    "aliases": [],
+    "official_domains": [
+      "accenture.com"
+    ]
+  },
+  {
+    "name": "Capgemini",
+    "aliases": [],
+    "official_domains": [
+      "capgemini.com"
+    ]
+  },
+  {
+    "name": "IBM",
+    "aliases": [],
+    "official_domains": [
+      "ibm.com"
+    ]
+  },
+  {
+    "name": "Deloitte",
+    "aliases": [],
+    "official_domains": [
+      "deloitte.com"
+    ]
+  },
+  {
+    "name": "LTIMindtree",
+    "aliases": [
+      "LTI",
+      "Mindtree"
+    ],
+    "official_domains": [
+      "ltimindtree.com",
+      "mindtree.com",
+      "lntinfotech.com"
+    ]
+  },
+  {
+    "name": "Mphasis",
+    "aliases": [],
+    "official_domains": [
+      "mphasis.com"
+    ]
+  },
+  {
+    "name": "Hexaware",
+    "aliases": [
+      "Hexaware Technologies"
+    ],
+    "official_domains": [
+      "hexaware.com"
+    ]
+  },
+  {
+    "name": "Persistent Systems",
+    "aliases": [],
+    "official_domains": [
+      "persistent.com"
+    ]
+  },
+  {
+    "name": "Coforge",
+    "aliases": [],
+    "official_domains": [
+      "coforge.com"
+    ]
+  },
+  {
+    "name": "Zensar",
+    "aliases": [
+      "Zensar Technologies"
+    ],
+    "official_domains": [
+      "zensar.com"
+    ]
+  },
+  {
+    "name": "Birlasoft",
+    "aliases": [],
+    "official_domains": [
+      "birlasoft.com"
+    ]
+  },
+  {
+    "name": "L&T Technology Services",
+    "aliases": [
+      "LTTS"
+    ],
+    "official_domains": [
+      "ltts.com"
+    ]
+  },
+  {
+    "name": "Larsen & Toubro",
+    "aliases": [
+      "L&T",
+      "Larsen and Toubro"
+    ],
+    "official_domains": [
+      "larsentoubro.com"
+    ]
+  },
+  {
+    "name": "Cyient",
+    "aliases": [],
+    "official_domains": [
+      "cyient.com"
+    ]
+  },
+  {
+    "name": "NTT DATA",
+    "aliases": [],
+    "official_domains": [
+      "nttdata.com"
+    ]
+  },
+  {
+    "name": "DXC Technology",
+    "aliases": [
+      "DXC"
+    ],
+    "official_domains": [
+      "dxc.com"
+    ]
+  },
+  {
+    "name": "EY",
+    "aliases": [
+      "Ernst & Young",
+      "Ernst and Young"
+    ],
+    "official_domains": [
+      "ey.com"
+    ]
+  },
+  {
+    "name": "PwC",
+    "aliases": [
+      "PricewaterhouseCoopers"
+    ],
+    "official_domains": [
+      "pwc.com"
+    ]
+  },
+  {
+    "name": "KPMG",
+    "aliases": [],
+    "official_domains": [
+      "kpmg.com"
+    ]
+  },
+  {
+    "name": "Genpact",
+    "aliases": [],
+    "official_domains": [
+      "genpact.com"
+    ]
+  },
+  {
+    "name": "EXL",
+    "aliases": [
+      "EXL Service",
+      "ExlService"
+    ],
+    "official_domains": [
+      "exlservice.com"
+    ]
+  },
+  {
+    "name": "WNS",
+    "aliases": [
+      "WNS Global Services"
+    ],
+    "official_domains": [
+      "wns.com"
+    ]
+  },
+  {
+    "name": "Concentrix",
+    "aliases": [],
+    "official_domains": [
+      "concentrix.com"
+    ]
+  },
+  {
+    "name": "Teleperformance",
+    "aliases": [],
+    "official_domains": [
+      "teleperformance.com"
+    ]
+  },
+  {
+    "name": "Sutherland",
+    "aliases": [
+      "Sutherland Global"
+    ],
+    "official_domains": [
+      "sutherlandglobal.com"
+    ]
+  },
+  {
+    "name": "Mu Sigma",
+    "aliases": [],
+    "official_domains": [
+      "mu-sigma.com"
+    ]
+  },
+  {
+    "name": "Fractal Analytics",
+    "aliases": [],
+    "official_domains": [
+      "fractal.ai"
+    ]
+  },
+  {
+    "name": "Tiger Analytics",
+    "aliases": [],
+    "official_domains": [
+      "tigeranalytics.com"
+    ]
+  },
+  {
+    "name": "Virtusa",
+    "aliases": [],
+    "official_domains": [
+      "virtusa.com"
+    ]
+  },
+  {
+    "name": "UST",
+    "aliases": [
+      "UST Global"
+    ],
+    "official_domains": [
+      "ust.com"
+    ]
+  },
+  {
+    "name": "Sonata Software",
+    "aliases": [],
+    "official_domains": [
+      "sonata-software.com"
+    ]
+  },
+  {
+    "name": "Mastek",
+    "aliases": [],
+    "official_domains": [
+      "mastek.com"
+    ]
+  },
+  {
+    "name": "KPIT Technologies",
+    "aliases": [
+      "KPIT"
+    ],
+    "official_domains": [
+      "kpit.com"
+    ]
+  },
+  {
+    "name": "Tata Elxsi",
+    "aliases": [],
+    "official_domains": [
+      "tataelxsi.com"
+    ]
+  },
+  {
+    "name": "Happiest Minds",
+    "aliases": [],
+    "official_domains": [
+      "happiestminds.com"
+    ]
+  },
+  {
+    "name": "Nagarro",
+    "aliases": [],
+    "official_domains": [
+      "nagarro.com"
+    ]
+  },
+  {
+    "name": "Thoughtworks",
+    "aliases": [],
+    "official_domains": [
+      "thoughtworks.com"
+    ]
+  },
+  {
+    "name": "EPAM",
+    "aliases": [
+      "EPAM Systems"
+    ],
+    "official_domains": [
+      "epam.com"
+    ]
+  },
+  {
+    "name": "Atos",
+    "aliases": [],
+    "official_domains": [
+      "atos.net"
+    ]
+  },
+  {
+    "name": "Publicis Sapient",
+    "aliases": [
+      "Sapient"
+    ],
+    "official_domains": [
+      "publicissapient.com"
+    ]
+  },
+  {
+    "name": "Google",
+    "aliases": [],
+    "official_domains": [
+      "google.com"
+    ]
+  },
+  {
+    "name": "Microsoft",
+    "aliases": [],
+    "official_domains": [
+      "microsoft.com"
+    ]
+  },
+  {
+    "name": "Amazon",
+    "aliases": [
+      "Amazon Web Services",
+      "AWS"
+    ],
+    "official_domains": [
+      "amazon.com",
+      "amazon.in",
+      "amazon.jobs"
+    ]
+  },
+  {
+    "name": "Meta",
+    "aliases": [
+      "Facebook"
+    ],
+    "official_domains": [
+      "meta.com",
+      "fb.com",
+      "facebook.com"
+    ]
+  },
+  {
+    "name": "Apple",
+    "aliases": [],
+    "official_domains": [
+      "apple.com"
+    ],
+    "case_sensitive_aliases": [
+      "Apple"
+    ]
+  },
+  {
+    "name": "Oracle",
+    "aliases": [],
+    "official_domains": [
+      "oracle.com"
+    ],
+    "case_sensitive_aliases": [
+      "Oracle"
+    ]
+  },
+  {
+    "name": "SAP",
+    "aliases": [
+      "SAP Labs"
+    ],
+    "official_domains": [
+      "sap.com"
+    ]
+  },
+  {
+    "name": "Adobe",
+    "aliases": [],
+    "official_domains": [
+      "adobe.com"
+    ]
+  },
+  {
+    "name": "Salesforce",
+    "aliases": [],
+    "official_domains": [
+      "salesforce.com"
+    ]
+  },
+  {
+    "name": "Cisco",
+    "aliases": [],
+    "official_domains": [
+      "cisco.com"
+    ]
+  },
+  {
+    "name": "Intel",
+    "aliases": [],
+    "official_domains": [
+      "intel.com"
+    ],
+    "case_sensitive_aliases": [
+      "Intel"
+    ]
+  },
+  {
+    "name": "Qualcomm",
+    "aliases": [],
+    "official_domains": [
+      "qualcomm.com"
+    ]
+  },
+  {
+    "name": "NVIDIA",
+    "aliases": [],
+    "official_domains": [
+      "nvidia.com"
+    ]
+  },
+  {
+    "name": "Texas Instruments",
+    "aliases": [],
+    "official_domains": [
+      "ti.com"
+    ]
+  },
+  {
+    "name": "Samsung",
+    "aliases": [],
+    "official_domains": [
+      "samsung.com"
+    ]
+  },
+  {
+    "name": "Dell Technologies",
+    "aliases": [
+      "Dell"
+    ],
+    "official_domains": [
+      "dell.com"
+    ]
+  },
+  {
+    "name": "HP",
+    "aliases": [
+      "Hewlett Packard",
+      "HP Inc"
+    ],
+    "official_domains": [
+      "hp.com"
+    ]
+  },
+  {
+    "name": "Broadcom",
+    "aliases": [
+      "VMware"
+    ],
+    "official_domains": [
+      "broadcom.com",
+      "vmware.com"
+    ]
+  },
+  {
+    "name": "Uber",
+    "aliases": [],
+    "official_domains": [
+      "uber.com"
+    ]
+  },
+  {
+    "name": "PayPal",
+    "aliases": [],
+    "official_domains": [
+      "paypal.com"
+    ]
+  },
+  {
+    "name": "Goldman Sachs",
+    "aliases": [],
+    "official_domains": [
+      "gs.com"
+    ]
+  },
+  {
+    "name": "JPMorgan Chase",
+    "aliases": [
+      "JPMorgan",
+      "JP Morgan",
+      "J.P. Morgan"
+    ],
+    "official_domains": [
+      "jpmorgan.com",
+      "jpmchase.com"
+    ]
+  },
+  {
+    "name": "Morgan Stanley",
+    "aliases": [],
+    "official_domains": [
+      "morganstanley.com"
+    ]
+  },
+  {
+    "name": "Deutsche Bank",
+    "aliases": [],
+    "official_domains": [
+      "db.com"
+    ]
+  },
+  {
+    "name": "Barclays",
+    "aliases": [],
+    "official_domains": [
+      "barclays.com"
+    ]
+  },
+  {
+    "name": "American Express",
+    "aliases": [
+      "Amex"
+    ],
+    "official_domains": [
+      "americanexpress.com",
+      "aexp.com"
+    ]
+  },
+  {
+    "name": "Walmart",
+    "aliases": [
+      "Walmart Global Tech"
+    ],
+    "official_domains": [
+      "walmart.com"
+    ]
+  },
+  {
+    "name": "Flipkart",
+    "aliases": [],
+    "official_domains": [
+      "flipkart.com"
+    ]
+  },
+  {
+    "name": "Paytm",
+    "aliases": [],
+    "official_domains": [
+      "paytm.com"
+    ]
+  },
+  {
+    "name": "PhonePe",
+    "aliases": [],
+    "official_domains": [
+      "phonepe.com"
+    ]
+  },
+  {
+    "name": "Swiggy",
+    "aliases": [],
+    "official_domains": [
+      "swiggy.in"
+    ]
+  },
+  {
+    "name": "Zomato",
+    "aliases": [],
+    "official_domains": [
+      "zomato.com"
+    ]
+  },
+  {
+    "name": "Razorpay",
+    "aliases": [],
+    "official_domains": [
+      "razorpay.com"
+    ]
+  },
+  {
+    "name": "Zoho",
+    "aliases": [
+      "Zoho Corporation"
+    ],
+    "official_domains": [
+      "zohocorp.com"
+    ]
+  },
+  {
+    "name": "Freshworks",
+    "aliases": [],
+    "official_domains": [
+      "freshworks.com"
+    ]
+  },
+  {
+    "name": "Ola",
+    "aliases": [
+      "Ola Cabs",
+      "Ola Electric"
+    ],
+    "official_domains": [
+      "olacabs.com",
+      "olaelectric.com"
+    ]
+  },
+  {
+    "name": "BYJU'S",
+    "aliases": [
+      "Byjus",
+      "BYJUS"
+    ],
+    "official_domains": [
+      "byjus.com"
+    ]
+  },
+  {
+    "name": "Unacademy",
+    "aliases": [],
+    "official_domains": [
+      "unacademy.com"
+    ]
+  },
+  {
+    "name": "Myntra",
+    "aliases": [],
+    "official_domains": [
+      "myntra.com"
+    ]
+  },
+  {
+    "name": "Reliance Industries",
+    "aliases": [
+      "Reliance Jio",
+      "Jio",
+      "Reliance"
+    ],
+    "official_domains": [
+      "ril.com",
+      "jio.com"
+    ],
+    "case_sensitive_aliases": [
+      "Reliance"
+    ]
+  },
+  {
+    "name": "Bharti Airtel",
+    "aliases": [
+      "Airtel"
+    ],
+    "official_domains": [
+      "airtel.com",
+      "airtel.in"
+    ]
+  },
+  {
+    "name": "Tata Motors",
+    "aliases": [],
+    "official_domains": [
+      "tatamotors.com"
+    ]
+  },
+  {
+    "name": "Mahindra & Mahindra",
+    "aliases": [
+      "Mahindra and Mahindra",
+      "Mahindra"
+    ],
+    "official_domains": [
+      "mahindra.com"
+    ]
+  },
+  {
+    "name": "Maruti Suzuki",
+    "aliases": [],
+    "official_domains": [
+      "marutisuzuki.com"
+    ]
+  },
+  {
+    "name": "ITC",
+    "aliases": [
+      "ITC Limited"
+    ],
+    "official_domains": [
+      "itc.in",
+      "itcportal.com"
+    ]
+  },
+  {
+    "name": "Hindustan Unilever",
+    "aliases": [
+      "HUL",
+      "Unilever"
+    ],
+    "official_domains": [
+      "unilever.com"
+    ]
+  },
+  {
+    "name": "HDFC Bank",
+    "aliases": [],
+    "official_domains": [
+      "hdfcbank.com"
+    ]
+  },
+  {
+    "name": "ICICI Bank",
+    "aliases": [],
+    "official_domains": [
+      "icicibank.com"
+    ]
+  },
+  {
+    "name": "Axis Bank",
+    "aliases": [],
+    "official_domains": [
+      "axisbank.com"
+    ]
+  },
+  {
+    "name": "State Bank of India",
+    "aliases": [
+      "SBI"
+    ],
+    "official_domains": [
+      "sbi.co.in"
+    ]
+  },
+  {
+    "name": "Kotak Mahindra Bank",
+    "aliases": [
+      "Kotak"
+    ],
+    "official_domains": [
+      "kotak.com"
+    ]
+  },
+  {
+    "name": "Bajaj Finserv",
+    "aliases": [],
+    "official_domains": [
+      "bajajfinserv.in"
+    ]
+  },
+  {
+    "name": "Siemens",
+    "aliases": [],
+    "official_domains": [
+      "siemens.com"
+    ]
+  },
+  {
+    "name": "Bosch",
+    "aliases": [],
+    "official_domains": [
+      "bosch.com"
+    ]
+  }
+]

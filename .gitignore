@@ -1,0 +1,14 @@
+# Secrets
+.env
+kaggle.json
+
+# Python
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Data and model artifacts
+ml/data/
+ml/artifacts/
