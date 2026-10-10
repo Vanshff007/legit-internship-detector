@@ -1,0 +1,15 @@
+**/.venv
+**/node_modules
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+**/*.egg-info
+.git
+.env
+backend/data
+backend/tests
+web/dist
+extension
+ml/data
+ml/.venv
+docs

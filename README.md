@@ -76,6 +76,16 @@ npm run build
 
 In Chrome or Edge, open `chrome://extensions`, turn on Developer mode, click "Load unpacked" and pick the `extension/` folder. Select offer text on any page, right-click and choose "Check with Legit Internship Detector", or open the extension's popup to check the selected text or the whole page. The extension talks to `http://127.0.0.1:8000` by default; change it under Settings in the popup.
 
+### Run with Docker
+
+```bash
+gh release download model-text-baseline-v1 --pattern "*.joblib" --dir ml/artifacts
+docker build -t legit-internship-detector .
+docker run -p 8000:8000 legit-internship-detector
+```
+
+Open http://127.0.0.1:8000/. Every push to `main` also publishes the image to `ghcr.io/vanshff007/legit-internship-detector` (see `.github/workflows/deploy.yml`).
+
 Optional settings in `.env`: `SAFE_BROWSING_API_KEY` (link checks), `REDIS_URL` (shared cache).
 
 Run tests with `.venv/Scripts/python -m pytest` in `backend/`.
